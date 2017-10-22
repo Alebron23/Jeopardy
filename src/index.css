@@ -1,0 +1,55 @@
+body{
+	background-color: #ffb26d;
+	/* padding: 0px; */
+}
+/* rgb(246, 158, 86); */
+.container {
+	padding-right: 0;
+	padding-left: 0;
+	padding-top: 0;
+}
+
+.heading {
+	text-align: center;
+}
+
+.h2 {
+	padding: 0;
+}
+
+/** The main title of the landing page */
+.main {
+	font-family: Brush Script Std, Brush Script MT, cursive;
+	color: white;
+	font-size: 400%;
+}
+
+/** Loading screen */
+.loader {
+	position: relative;
+	left: 50%;
+	top: 200px;
+}
+
+.categories {
+	position: absolute;
+	left: 80%;
+	top: 6%;
+}
+
+.question {
+	border: 1px solid white;
+	border-radius: 20px;
+}
+
+.noPoints {
+	padding: 30px;
+	border: 1px solid white;
+	border-radius: 20px;
+}
+
+.nav {
+	background-color: #cdaf95;
+	padding-right: 0px;
+	/* width: 2000px; */
+}
