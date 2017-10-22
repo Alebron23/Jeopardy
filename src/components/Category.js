@@ -5,12 +5,25 @@ import { setQuestion } from '../actions/index.js'
 import Question from './Question';
 import ReactLoading from 'react-loading';
 
+/** Display list of <Question /> components pertaining to the <Category /> 
+ * @class
+*/
 export class Category extends Component {
 
+    /** Set the Category that was picked from the list categories
+     * @function
+     */
     componentDidMount() {
         this.props.setQuestion(this.props.categoryData[this.props.category]);        
     }
-  
+    
+    /**
+     * Display jeopardy questions if they are fetched from server, 
+     * else display the <ReactLoading /> loading spinner.
+     * @function
+     * @return {<Question />} - The question component that displays the question, points, and answer.
+     * @return {<ReactLoading />} - Loading spinner to be returned while data is fetched. 
+     */
     displayQuestions = () => {
         if(this.props.question.clues !== undefined){
             return this.props.question.clues.map(clue => 
@@ -20,7 +33,12 @@ export class Category extends Component {
             return <div className="loader"><ReactLoading /></div>
         }
     }
-      
+    
+    /**
+     * render title of category, link back to all categories, and
+     * questions to that category. 
+     * @return {ReactElement}
+     */
     render() {
         return(
             <div className='container'>
@@ -36,6 +54,10 @@ export class Category extends Component {
     }
 }
 
+/**
+ * Connects state in redux store to our props. 
+ * @param {*} state - data on state we want available to props 
+ */
 function mapStateToProps(state) {
      
     /**

@@ -9,6 +9,7 @@ import rootReducer from './reducers/index.js'
 import { setCategories } from './actions/index.js';
 import './index.css';
 
+//* Sets up our redux store */
 const store = createStore(rootReducer);
 
 ReactDOM.render(
