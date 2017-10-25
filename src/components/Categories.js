@@ -30,12 +30,15 @@ export class Categories extends Component {
    * @function
    */
   fetchData = () => {
+    console.log(this.props.categories);
     this.props.categories.map(category => {
       let url = 'http://jservice.io/api/category?id=' + category.id;
-      
+      console.log(category.id);
       fetch(url)
       .then(response => response.json())
-      .then(json => this.props.addCategoryData(json));
+      .then(json => {
+        this.props.addCategoryData(json)
+      });
     });
   }
 
@@ -46,7 +49,7 @@ export class Categories extends Component {
    */
   render() {
     return(
-      <div className='container heading'>
+      <div className='container element'>
         <h2>Categories</h2>
         { 
            this.props.categories.map((category, index) => {

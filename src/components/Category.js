@@ -14,7 +14,16 @@ export class Category extends Component {
      * @function
      */
     componentDidMount() {
-        this.props.setQuestion(this.props.categoryData[this.props.category]);        
+        /** The categories in categoryData are not in the same order as they are in the categories array
+         *  so you have to get the id from the categories array and then search the categoryData for the matching id
+         *  to set that item so the correct questions are displayed for the category that was clicked. 
+         */
+        this.props.categoryData.map((category, index) => {
+            if(category.id === this.props.categories[this.props.category].id){
+                this.props.setQuestion(this.props.categoryData[index]);        
+            }
+        });
+        
     }
     
     /**
@@ -40,9 +49,10 @@ export class Category extends Component {
      * @return {ReactElement}
      */
     render() {
+        console.log(this.props);
         return(
             <div className='container'>
-                <div className='heading nav'>
+                <div className='element nav'>
                     <h2>{this.props.question.title}</h2> 
                     <Link className='categories' to='/' onClick={() => this.props.setQuestion([])}>Categories</Link>
                 </div>
@@ -64,7 +74,7 @@ function mapStateToProps(state) {
      When you use combine reducers, you have to specify state.categories or state.whatever and
      not just state or else it gives you error.  
      */ 
-    return { category: state.category, question: state.question, categoryData: state.categoryData, index: state.index }
+    return { category: state.category, question: state.question, categoryData: state.categoryData, categories: state.categories}
 }
   
 export default connect(mapStateToProps, { setQuestion })(Category);

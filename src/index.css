@@ -1,24 +1,21 @@
 body{
-	background-color: #ffb26d;
-	/* padding: 0px; */
+	background-color: #2D2939;
 }
-/* rgb(246, 158, 86); */
+
+/** Remove built in padding*/
 .container {
 	padding-right: 0;
 	padding-left: 0;
-	padding-top: 0;
 }
 
-.heading {
+/**  Styling for different elements like titles, answers, and questions*/
+.element {
 	text-align: center;
-}
-
-.h2 {
-	padding: 0;
+	color: white;
 }
 
 /** The main title of the landing page */
-.main {
+.title {
 	font-family: Brush Script Std, Brush Script MT, cursive;
 	color: white;
 	font-size: 400%;
@@ -34,22 +31,33 @@ body{
 .categories {
 	position: absolute;
 	left: 80%;
-	top: 6%;
+	top: 4.5%;
 }
 
 .question {
-	border: 1px solid white;
+	border: 1px solid #3065EA;
 	border-radius: 20px;
+	padding: 10px;
+	background: url('https://media1.s-nbcnews.com/j/streams/2013/november/131119/2d9734380-131119-milkywayphoto-hmed-1025a-files.nbcnews-ux-2880-1000.jpg');
+}
+
+.answer {
+	animation-name: myframes;
+	animation-duration: 2s;
 }
 
 .noPoints {
 	padding: 30px;
-	border: 1px solid white;
+	border: 1px solid yellowgreen;
 	border-radius: 20px;
+	background: url('https://media1.s-nbcnews.com/j/streams/2013/november/131119/2d9734380-131119-milkywayphoto-hmed-1025a-files.nbcnews-ux-2880-1000.jpg');
 }
 
-.nav {
-	background-color: #cdaf95;
-	padding-right: 0px;
-	/* width: 2000px; */
+@keyframes myframes {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
