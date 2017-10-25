@@ -38,9 +38,14 @@ body{
 	border: 1px solid #3065EA;
 	border-radius: 20px;
 	padding: 10px;
-	background-image: url('https://i.pinimg.com/736x/84/e8/99/84e89985393f62889a6340538c7ec77c--iphone--plus-backgrounds-backgrounds-wallpapers.jpg');
-	background-repeat: no-repeat;
-	background-size: 100%;
+	background: url('https://i.pinimg.com/736x/84/e8/99/84e89985393f62889a6340538c7ec77c--iphone--plus-backgrounds-backgrounds-wallpapers.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	/* background-repeat: no-repeat; */
+	/* background-size: 100%; */
+	
 }
 
 .answer {
