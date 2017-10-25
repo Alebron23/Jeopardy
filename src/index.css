@@ -38,7 +38,9 @@ body{
 	border: 1px solid #3065EA;
 	border-radius: 20px;
 	padding: 10px;
-	background: url('https://media1.s-nbcnews.com/j/streams/2013/november/131119/2d9734380-131119-milkywayphoto-hmed-1025a-files.nbcnews-ux-2880-1000.jpg');
+	background-image: url('https://i.pinimg.com/736x/84/e8/99/84e89985393f62889a6340538c7ec77c--iphone--plus-backgrounds-backgrounds-wallpapers.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
 .answer {
@@ -46,6 +48,7 @@ body{
 	animation-duration: 2s;
 }
 
+/** When the question has no points give it a different sytling*/
 .noPoints {
 	padding: 30px;
 	border: 1px solid yellowgreen;
