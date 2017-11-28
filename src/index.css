@@ -43,22 +43,11 @@ body{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	/* background-repeat: no-repeat; */
-	/* background-size: 100%; */
-	
 }
 
 .answer {
 	animation-name: myframes;
 	animation-duration: 2s;
-}
-
-/** When the question has no points give it a different sytling*/
-.noPoints {
-	padding: 30px;
-	border: 1px solid yellowgreen;
-	border-radius: 20px;
-	background: url('https://media1.s-nbcnews.com/j/streams/2013/november/131119/2d9734380-131119-milkywayphoto-hmed-1025a-files.nbcnews-ux-2880-1000.jpg');
 }
 
 @keyframes myframes {

@@ -26,7 +26,7 @@ class Question extends Component {
     render() {
         console.log(this.props.value);
         return(
-            <div className={this.props.value === null ? "noPoints": "question"} onClick={() => this.setState({reveal: this.state.reveal + 1})}>
+            <div className="question" onClick={() => this.setState({reveal: this.state.reveal + 1})}>
                 <h4 className="element" >{this.props.question}</h4>
                 
                 <h4 className="element"> {this.props.value !== null ? <div> <hr />{this.props.value} </div> : ''} </h4>
