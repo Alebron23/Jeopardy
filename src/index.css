@@ -1,7 +1,7 @@
 body{
 	background-color: #2D2939;
 }
-
+ 
 /** Remove built in padding*/
 .container {
 	padding-right: 0;

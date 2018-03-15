@@ -24,7 +24,6 @@ class Question extends Component {
      * @return {ReactElement}
      */
     render() {
-        console.log(this.props.value);
         return(
             <div className="question" onClick={() => this.setState({reveal: this.state.reveal + 1})}>
                 <h4 className="element" >{this.props.question}</h4>

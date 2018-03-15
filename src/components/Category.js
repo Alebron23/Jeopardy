@@ -49,7 +49,6 @@ export class Category extends Component {
      * @return {ReactElement}
      */
     render() {
-        console.log(this.props);
         return(
             <div className='container'>
                 <div className='element nav'>

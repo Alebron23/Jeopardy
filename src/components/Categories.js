@@ -22,18 +22,17 @@ export class Categories extends Component {
             this.props.setCategories(json);
             this.fetchData();
         });
-      }
-    } 
+    }
+  } 
   
   /**
    * fetch question object for our individual categories
    * @function
    */
   fetchData = () => {
-    console.log(this.props.categories);
     this.props.categories.map(category => {
       let url = 'http://jservice.io/api/category?id=' + category.id;
-      console.log(category.id);
+
       fetch(url)
       .then(response => response.json())
       .then(json => {
