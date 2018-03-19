@@ -2,7 +2,7 @@ import React       from 'react';
 import Question    from '../src/components/Question.js';
 import { shallow } from 'enzyme';
 
-const props = {question: 'test_question', answer: 'test_answer', value: 1};
+const props = { question: 'test_question', answer: 'test_answer', value: 1 };
 const question = shallow(<Question {...props}/>);
 
 describe('Testing the <Question /> Component', () => {

@@ -4,7 +4,7 @@ import { Category } from '../src/components/Category.js';
 import { question, category, categoryData } from '../data/fixtures.js';
 
 const setQuestionMock = jest.fn();
-let props = {category, question, setQuestion: setQuestionMock, categoryData};
+let props = { category, question, setQuestion: setQuestionMock, categoryData };
 const kategory = shallow(<Category {...props} />);
 
 describe('Testing Category Component', () => {

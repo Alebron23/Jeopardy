@@ -6,8 +6,8 @@ import sinon, { fakeServer } from 'sinon';
 
 const mockSetCategory = jest.fn();
 const mockAddCategoryData = jest.fn();
-let props             = { categories, setCategory: mockSetCategory, categoryData, addCategoryData: mockAddCategoryData };
-const kategories      = shallow(<Categories {...props} />);
+let props = { categories, setCategory: mockSetCategory, categoryData, addCategoryData: mockAddCategoryData };
+const kategories = shallow(<Categories {...props} />);
 
 //window.fetch = jest.fn(() => new Promise(response => new Promise(json => { json()})));
 //fetch = jest.fn(() => new Promise(response => response.json()));
