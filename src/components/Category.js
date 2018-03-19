@@ -20,10 +20,9 @@ export class Category extends Component {
      */
     this.props.categoryData.map((category, index) => {
       if (category.id === this.props.categories[this.props.category].id) {
-        this.props.setQuestion(this.props.categoryData[index]);
+        this.props.setQuestion(this.props.categoryData[index]);    
       }
     });
-
   }
 
   /**

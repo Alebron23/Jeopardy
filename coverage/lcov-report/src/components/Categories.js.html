@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">62.5% </span>
+        <span class="strong">57.14% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/16</span>
+        <span class='fraction'>8/14</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>6/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">62.5% </span>
+        <span class="strong">57.14% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/16</span>
+        <span class='fraction'>8/14</span>
       </div>
     </div>
   </div>
@@ -100,7 +100,36 @@
 55
 56
 57
-58</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -110,8 +139,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -122,24 +149,39 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">669x</span>
-<span class="cline-any cline-yes">669x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">669x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">671x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">671x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -162,51 +204,72 @@ import { connect } from 'react-redux';
 import { setCategories, setCategory, addCategoryData  } from '../actions/index.js';
 import { Link } from 'react-router-dom';
 &nbsp;
+/**
+ * class that displays jeopardy categories
+ * @class
+ */
 export class Categories extends Component {
 &nbsp;
+  /**
+   * fetch the jeopardy categories from a jeopardy api
+   * @function
+   */
   componentDidMount() {
-    // if the categories is already set then we don't need to fetch. 
-    console.log('OUTSIDE IF');
+    /** if the categoryData is already set then we don't need to fetch.*/ 
     if(this.props.categoryData.length === 0) {
-      console.log('INSIDEIF');
       fetch('http://jservice.io/api/categories?count=20')
         .then(<span class="fstat-no" title="function not covered" >re</span>sponse =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
         .then(<span class="fstat-no" title="function not covered" >js</span>on =&gt; {
 <span class="cstat-no" title="statement not covered" >            this.props.setCategories(json);</span>
 <span class="cstat-no" title="statement not covered" >            this.fetchData();</span>
         });
-      }
     } 
+  } 
   
+  /**
+   * fetch question object for our individual categories
+   * @function
+   */
   fetchData = () =&gt; {
     this.props.categories.map(category =&gt; {
       let url = 'http://jservice.io/api/category?id=' + category.id;
-      
+&nbsp;
       fetch(url)
       .then(<span class="fstat-no" title="function not covered" >re</span>sponse =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
-      .then(<span class="fstat-no" title="function not covered" >js</span>on =&gt; <span class="cstat-no" title="statement not covered" >this.props.addCategoryData(json))</span>;
+      .then(<span class="fstat-no" title="function not covered" >js</span>on =&gt; {
+<span class="cstat-no" title="statement not covered" >        this.props.addCategoryData(json)</span>
+      });
     });
   }
 &nbsp;
+  /**
+   * display a link for the category to the questions pertaining to it. 
+   * @function
+   * @return {ReactElement}
+   */
   render() {
     return(
-      &lt;div className='container'&gt;
+      &lt;div className='container element'&gt;
         &lt;h2&gt;Categories&lt;/h2&gt;
         { 
-           this.props.categories.map((category, index) =&gt; {
-            return &lt;Link to='/category' 
-                         key={category.id} 
-                         onClick={() =&gt; { this.props.setCategory(index) }}
-                    &gt;
-                      &lt;h4&gt;{category.title}&lt;/h4&gt;
-                    &lt;/Link&gt; 
-          })  
+           this.props.categories.map((category, index) =&gt; (
+            &lt;Link to='/category' 
+              key={category.id} 
+              onClick={() =&gt; { this.props.setCategory(index) }}
+            &gt;
+              &lt;h4&gt;{category.title}&lt;/h4&gt;
+            &lt;/Link&gt; 
+          ))  
         }
       &lt;/div&gt;
     )
   }
 }
 &nbsp;
+/**
+ * provide state from our store to our props. 
+ * @function
+ */
 function <span class="fstat-no" title="function not covered" >mapStateToProps(</span>state) {
   // Categories is what we want to be available on our props. 
   // When you use combine reducers, you have to specify state.categories or state.whatever and 
@@ -220,7 +283,7 @@ export default connect(mapStateToProps, { setCategories, setCategory, addCategor
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 20 2017 16:49:28 GMT-0400 (EDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Mar 19 2018 17:51:12 GMT-0400 (EDT)
 </div>
 </div>
 <script src="../../prettify.js"></script>

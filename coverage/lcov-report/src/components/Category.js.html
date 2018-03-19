@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">85.71% </span>
+        <span class="strong">80% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>6/7</span>
+        <span class='fraction'>8/10</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>1/2</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">83.33% </span>
-        <span class="quiet">Functions</span>
-        <span class='fraction'>5/6</span>
+        <span class='fraction'>2/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">85.71% </span>
-        <span class="quiet">Lines</span>
+        <span class="quiet">Functions</span>
         <span class='fraction'>6/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>8/10</span>
       </div>
     </div>
   </div>
@@ -86,7 +86,53 @@
 41
 42
 43
-44</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -96,6 +142,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -104,13 +161,26 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -130,47 +200,82 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setQuestion } from '../actions/index.js'
 import Question from './Question';
+import ReactLoading from 'react-loading';
 &nbsp;
+/** Display list of &lt;Question /&gt; components pertaining to the &lt;Category /&gt; 
+ * @class
+*/
 export class Category extends Component {
 &nbsp;
-    componentDidMount() {
-        this.props.setQuestion(this.props.categoryData[this.props.category]);    
+  /** Set the Category that was picked from the list categories
+   * @function
+   */
+  componentDidMount() {
+    /** The categories in categoryData are not in the same order as they are in the categories array
+     *  so you have to get the id from the categories array and then search the categoryData for the matching id
+     *  to set that item so the correct questions are displayed for the category that was clicked. 
+     */
+    this.props.categoryData.map((category, index) =&gt; {
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (category.id === this.props.categories[this.props.category].id) {
+        this.props.setQuestion(this.props.categoryData[index]);    
+      }
+    });
+  }
+&nbsp;
+  /**
+   * Display jeopardy questions if they are fetched from server, 
+   * else display the &lt;ReactLoading /&gt; loading spinner.
+   * @function
+   * @return {&lt;Question /&gt;} - The question component that displays the question, points, and answer.
+   * @return {&lt;ReactLoading /&gt;} - Loading spinner to be returned while data is fetched. 
+   */
+  displayQuestions = () =&gt; {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.props.question.clues !== undefined) {
+      return this.props.question.clues.map(clue =&gt;
+        &lt;h4 key={clue.id}&gt;&lt;Question question={clue.question} answer={clue.answer} value={clue.value} /&gt;&lt;/h4&gt;
+      );
+    } else {
+<span class="cstat-no" title="statement not covered" >      return &lt;div className="loader"&gt;&lt;ReactLoading /&gt;&lt;/div&gt;</span>
     }
-  
-    displayQuestions = () =&gt; {
-        <span class="missing-if-branch" title="else path not taken" >E</span>if(this.props.question.clues !== undefined){
-            return this.props.question.clues.map(clue =&gt; 
-                &lt;h4 key={clue.id}&gt;&lt;Question question={clue.question} answer={clue.answer} value={clue.value} /&gt;&lt;/h4&gt;
-            );
+  }
+&nbsp;
+  /**
+   * render title of category, link back to all categories, and
+   * questions to that category. 
+   * @return {ReactElement}
+   */
+  render() {
+    return (
+      &lt;div className='container'&gt;
+        &lt;div className='element nav'&gt;
+          &lt;h2&gt;{this.props.question.title}&lt;/h2&gt;
+          &lt;Link className='categories' to='/' onClick={() =&gt; this.props.setQuestion([])}&gt;Categories&lt;/Link&gt;
+        &lt;/div&gt;
+        {
+          this.displayQuestions()
         }
-    }
-      
-    render() {
-        return(
-            &lt;div className='container'&gt;
-                &lt;h2&gt;{this.props.question.title}&lt;/h2&gt; 
-                &lt;Link to='/' onClick={() =&gt; this.props.setQuestion([])}&gt;Categories&lt;/Link&gt;
-                {   
-                    this.displayQuestions() 
-                }
-            &lt;/div&gt;
-        )
-    }
+      &lt;/div&gt;
+    )
+  }
 }
 &nbsp;
+/**
+ * Connects state in redux store to our props. 
+ * @param {*} state - data on state we want available to props 
+ */
 function <span class="fstat-no" title="function not covered" >mapStateToProps(</span>state) {
-     
-    /**
-     When you use combine reducers, you have to specify state.categories or state.whatever and
-     not just state or else it gives you error.  
-     */ 
-<span class="cstat-no" title="statement not covered" >    return { category: state.category, question: state.question, categoryData: state.categoryData, index: state.index }</span>
+&nbsp;
+  /**
+   When you use combine reducers, you have to specify state.categories or state.whatever and
+   not just state or else it gives you error.  
+   */
+<span class="cstat-no" title="statement not covered" >  return { category: state.category, question: state.question, categoryData: state.categoryData, categories: state.categories }</span>
 }
-  
+&nbsp;
 export default connect(mapStateToProps, { setQuestion })(Category);
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -178,7 +283,7 @@ export default connect(mapStateToProps, { setQuestion })(Category);
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 20 2017 16:49:28 GMT-0400 (EDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Mar 19 2018 17:51:12 GMT-0400 (EDT)
 </div>
 </div>
 <script src="../../prettify.js"></script>

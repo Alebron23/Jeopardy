@@ -76,21 +76,32 @@
 31
 32
 33
-34</td><td class="line-coverage quiet"><span class="cline-any cline-yes">5x</span>
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</td><td class="line-coverage quiet"><span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -103,43 +114,92 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const SET_CATEGORIES    = 'SET_CATEGORIES';
-export const SET_CATEGORY      = 'SET_CATEGORY';
-export const SET_QUESTION      = 'SET_QUESTION'; 
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const SET_CATEGORIES = 'SET_CATEGORIES';
+export const SET_CATEGORY = 'SET_CATEGORY';
+export const SET_QUESTION = 'SET_QUESTION';
 export const ADD_CATEGORY_DATA = 'ADD_CATEGORY_DATA';
 &nbsp;
+/**
+ * action creator 
+ * @function
+ * @param {*} categories - an object with an array of all the jeopardy categories 
+ */
 export function setCategories(categories) {
-    return {
-        type: SET_CATEGORIES, 
-        categories: categories
-    }
+  return {
+    type: SET_CATEGORIES,
+    categories: categories
+  }
 }
 &nbsp;
+/**
+ * action creator 
+ * @function
+ * @param {*} category - an object with an array of all the questions pertaining to that category 
+ */
 export function setCategory(category) {
-    return {
-        type: SET_CATEGORY,
-        category
-    }
+  return {
+    type: SET_CATEGORY,
+    category
+  }
 }
 &nbsp;
+/**
+ * action creator 
+ * @function
+ * @param {*} question - an object with the question, value, answer and other data
+ */
 export function setQuestion(question) {
-    return {
-        type: SET_QUESTION,
-        question
-    }
+  return {
+    type: SET_QUESTION,
+    question
+  }
 }
 &nbsp;
+/**
+ * action creator 
+ * @function
+ * @param {*} categoryData - an array of objects containing all the questions for each category
+ */
 export function addCategoryData(categoryData) {
-    return {
-        type: ADD_CATEGORY_DATA,
-        categoryData    
-    };
+  return {
+    type: ADD_CATEGORY_DATA,
+    categoryData
+  };
 }
 &nbsp;
 &nbsp;</pre></td></tr>
@@ -148,7 +208,7 @@ export function addCategoryData(categoryData) {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 20 2017 16:49:28 GMT-0400 (EDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Mar 19 2018 17:51:12 GMT-0400 (EDT)
 </div>
 </div>
 <script src="../../prettify.js"></script>

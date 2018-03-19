@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1508532568189" clover="3.2.0">
-  <project timestamp="1508532568189" name="All files">
-    <metrics statements="56" coveredstatements="48" conditionals="18" coveredconditionals="17" methods="30" coveredmethods="23" elements="104" coveredelements="88" complexity="0" loc="56" ncloc="56" packages="5" files="9" classes="9">
+<coverage generated="1521496272294" clover="3.2.0">
+  <project timestamp="1521496272295" name="All files">
+    <metrics statements="57" coveredstatements="48" conditionals="22" coveredconditionals="19" methods="31" coveredmethods="24" elements="110" coveredelements="91" complexity="0" loc="57" ncloc="57" packages="5" files="9" classes="9">
       <package name="data">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="fixtures.js" path="/Users/victorlebron/Coding/Udemy Projects/React Testing/jeopardy/data/fixtures.js">
@@ -9,7 +9,7 @@
           <line num="1" count="4" type="stmt"/>
           <line num="2" count="4" type="stmt"/>
           <line num="3" count="4" type="stmt"/>
-          <line num="13" count="4" type="stmt"/>
+          <line num="17" count="4" type="stmt"/>
         </file>
       </package>
       <package name="setup">
@@ -32,72 +32,73 @@
           <line num="2" count="5" type="stmt"/>
           <line num="3" count="5" type="stmt"/>
           <line num="4" count="5" type="stmt"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
-          <line num="21" count="1" type="stmt"/>
-          <line num="28" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="48" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.components">
-        <metrics statements="28" coveredstatements="21" conditionals="6" coveredconditionals="5" methods="21" coveredmethods="15"/>
+        <metrics statements="29" coveredstatements="21" conditionals="10" coveredconditionals="7" methods="22" coveredmethods="16"/>
         <file name="App.js" path="/Users/victorlebron/Coding/Udemy Projects/React Testing/jeopardy/src/components/App.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="7" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
         </file>
         <file name="Categories.js" path="/Users/victorlebron/Coding/Udemy Projects/React Testing/jeopardy/src/components/Categories.js">
-          <metrics statements="16" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="6"/>
-          <line num="10" count="2" type="stmt"/>
-          <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="12" count="1" type="stmt"/>
-          <line num="13" count="1" type="stmt"/>
-          <line num="14" count="0" type="stmt"/>
-          <line num="16" count="0" type="stmt"/>
-          <line num="17" count="0" type="stmt"/>
-          <line num="23" count="669" type="stmt"/>
-          <line num="24" count="669" type="stmt"/>
-          <line num="26" count="669" type="stmt"/>
-          <line num="27" count="0" type="stmt"/>
-          <line num="28" count="0" type="stmt"/>
-          <line num="33" count="671" type="stmt"/>
-          <line num="38" count="671" type="stmt"/>
-          <line num="40" count="1" type="stmt"/>
-          <line num="55" count="0" type="stmt"/>
+          <metrics statements="14" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="6"/>
+          <line num="18" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="50" count="3" type="stmt"/>
+          <line num="55" count="3" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
+          <line num="76" count="0" type="stmt"/>
         </file>
         <file name="Category.js" path="/Users/victorlebron/Coding/Udemy Projects/React Testing/jeopardy/src/components/Category.js">
-          <metrics statements="7" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="5"/>
-          <line num="10" count="2" type="stmt"/>
-          <line num="14" count="3" type="cond" truecount="1" falsecount="1"/>
-          <line num="15" count="3" type="stmt"/>
-          <line num="16" count="3" type="stmt"/>
-          <line num="22" count="3" type="stmt"/>
-          <line num="25" count="1" type="stmt"/>
-          <line num="40" count="0" type="stmt"/>
+          <metrics statements="10" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="7" coveredmethods="6"/>
+          <line num="21" count="2" type="stmt"/>
+          <line num="22" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="23" count="2" type="stmt"/>
+          <line num="36" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="37" count="3" type="stmt"/>
+          <line num="38" count="3" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="51" count="3" type="stmt"/>
+          <line num="55" count="1" type="stmt"/>
+          <line num="75" count="0" type="stmt"/>
         </file>
         <file name="Question.js" path="/Users/victorlebron/Coding/Udemy Projects/React Testing/jeopardy/src/components/Question.js">
-          <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="9" count="1" type="stmt"/>
-          <line num="15" count="5" type="stmt"/>
-          <line num="17" count="2" type="stmt"/>
+          <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="28" count="5" type="stmt"/>
+          <line num="29" count="2" type="stmt"/>
         </file>
       </package>
       <package name="src.reducers">
         <metrics statements="13" coveredstatements="13" conditionals="12" coveredconditionals="12" methods="4" coveredmethods="4"/>
         <file name="index.js" path="/Users/victorlebron/Coding/Udemy Projects/React Testing/jeopardy/src/reducers/index.js">
           <metrics statements="13" coveredstatements="13" conditionals="12" coveredconditionals="12" methods="4" coveredmethods="4"/>
-          <line num="5" count="7" type="cond" truecount="2" falsecount="0"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="9" count="6" type="stmt"/>
-          <line num="14" count="7" type="cond" truecount="2" falsecount="0"/>
-          <line num="16" count="1" type="stmt"/>
-          <line num="17" count="6" type="stmt"/>
-          <line num="22" count="7" type="cond" truecount="2" falsecount="0"/>
-          <line num="24" count="1" type="stmt"/>
-          <line num="25" count="6" type="stmt"/>
-          <line num="30" count="7" type="cond" truecount="2" falsecount="0"/>
-          <line num="32" count="1" type="stmt"/>
-          <line num="33" count="1" type="stmt"/>
-          <line num="34" count="6" type="stmt"/>
+          <line num="11" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="15" count="6" type="stmt"/>
+          <line num="26" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="29" count="6" type="stmt"/>
+          <line num="40" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="43" count="6" type="stmt"/>
+          <line num="56" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="58" count="1" type="stmt"/>
+          <line num="59" count="1" type="stmt"/>
+          <line num="60" count="6" type="stmt"/>
         </file>
       </package>
     </metrics>

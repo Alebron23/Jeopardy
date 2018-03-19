@@ -80,7 +80,39 @@
 35
 36
 37
-38</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -93,10 +125,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -105,6 +135,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -120,47 +172,73 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { SET_CATEGORIES, SET_CATEGORY, SET_QUESTION, ADD_CATEGORY_DATA } from '../actions/index.js';
 import { combineReducers } from 'redux';
 &nbsp;
+/**
+ * Reducer
+ * @function
+ * @param {*} state 
+ * @param {*} action - All the categories returned by the jeopardy api
+ */
 function categories(state = [], action) {
-    switch(action.type){
-        case SET_CATEGORIES:
-            return action.categories
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case SET_CATEGORIES:
+      return action.categories
+    default:
+      return state;
+  }
 }
 &nbsp;
+/**
+ * Reducer
+ * @function
+ * @param {*} state 
+ * @param {*} action - the category with all the questions and info pertaining to it.
+ */
 function category(state = [], action) {
-    switch(action.type) {
-        case SET_CATEGORY:
-            return action.category
-        default: return state;
-    }
+  switch (action.type) {
+    case SET_CATEGORY:
+      return action.category
+    default: return state;
+  }
 }
 &nbsp;
+/**
+ * reducer
+ * @function
+ * @param {*} state 
+ * @param {*} action  - the question object with its value and answer
+ */
 function question(state = [], action) {
-    switch(action.type) {
-        case SET_QUESTION:
-            return action.question 
-        default: return state;
-    }
+  switch (action.type) {
+    case SET_QUESTION:
+      return action.question
+    default: return state;
+  }
 }
 &nbsp;
-function categoryData(state = [], action){
-    switch(action.type) {
-        case ADD_CATEGORY_DATA:
-            state.push(action.categoryData);
-            return state;
-        default: return state;
-    }
+/**
+ * reducer
+ * @function
+ * @param {*} state 
+ * @param {*} action - all the questions for the particular category are added to the state 
+ * array and then returned to be set in the store so in the end it will be an array 
+ * with a bunch of category objects and all the question to that category in the object. 
+ */
+function categoryData(state = [], action) {
+  switch (action.type) {
+    case ADD_CATEGORY_DATA:
+      state.push(action.categoryData);
+      return state;
+    default: return state;
+  }
 }
 &nbsp;
-export default combineReducers({categories, category, question, categoryData});</pre></td></tr>
+export default combineReducers({ categories, category, question, categoryData });</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Oct 20 2017 16:49:28 GMT-0400 (EDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Mar 19 2018 17:51:12 GMT-0400 (EDT)
 </div>
 </div>
 <script src="../../prettify.js"></script>

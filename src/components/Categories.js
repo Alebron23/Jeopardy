@@ -22,7 +22,7 @@ export class Categories extends Component {
             this.props.setCategories(json);
             this.fetchData();
         });
-    }
+    } 
   } 
   
   /**
@@ -32,7 +32,7 @@ export class Categories extends Component {
   fetchData = () => {
     this.props.categories.map(category => {
       let url = 'http://jservice.io/api/category?id=' + category.id;
-
+ 
       fetch(url)
       .then(response => response.json())
       .then(json => {
@@ -51,14 +51,14 @@ export class Categories extends Component {
       <div className='container element'>
         <h2>Categories</h2>
         { 
-           this.props.categories.map((category, index) => {
-            return <Link to='/category' 
-                         key={category.id} 
-                         onClick={() => { this.props.setCategory(index) }}
-                    >
-                      <h4>{category.title}</h4>
-                    </Link> 
-          })  
+           this.props.categories.map((category, index) => (
+            <Link to='/category' 
+              key={category.id} 
+              onClick={() => { this.props.setCategory(index) }}
+            >
+              <h4>{category.title}</h4>
+            </Link> 
+          ))  
         }
       </div>
     )
